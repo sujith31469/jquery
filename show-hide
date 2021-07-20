@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<meta charset="utf-8" />
+<title>Show and Hide Effects</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<style>      
+	.button {    
+	   background-color: #F08080;      
+	   border: none;      
+	   padding: 15px 32px;   
+       text-align: center;   
+	   text-decoration: none;
+       display: inline-block; 
+       font-size: 14px;
+       margin: 2px 3px; 
+       cursor: pointer;
+    }
+</style>
+</style>
+<script>
+// Hiding the displayed paragraphs with different speeds
+$(document).ready(function() {
+$("#hide").click(function() {
+$("h2.normal").hide(400);
+$("h2.fast").hide(100);
+$("h2.slow").hide(1000);
+});
+// Showing the hidden paragraphs with different speeds
+$("#show").click(function() {
+$("h2.normal").show(400);
+$("h2.fast").show(100);
+$("h2.slow").show(1000);       });
+});
+</script>
+</head>
+<body>
+<h2 class="normal">This line will show/hide with normal speed.</h2>
+<h2 class="fast">This line will show/hide with fast speed.</h2>
+<h2 class="slow">This line will show/hide with slow speed.</h2>
+<button class="button" id="hide">Hide </button>
+<button class="button" id="show">Show </button>
+</body>
+</html>
